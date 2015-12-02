@@ -24,22 +24,14 @@ gem 'devise'
 gem 'omniauth'
 gem 'cancan'
 gem 'strong_parameters'  # New attr_accessible behavior, default in Rails 4.0
-gem 'gem-groupon-oauth', git: 'git@github.groupondev.com:MerchantOS/gem-groupon-oauth.git'
-gem 'gem-payments-ds', git: 'git@github.groupondev.com:payments/gem-payments-ds.git', ref: 'HEAD'
 
 gem 'haml-rails'
 gem 'activeuuid'
 gem 'rollout'
 
-gem 'bpro-web-base', git: 'git@github.groupondev.com:MerchantOS/gem-bpro-web-base.git', ref: 'HEAD'
-# gem 'bpro-web-base', path: "../gem-bpro-web-base" # local dev
 
-gem 'gem-merchantos-mailer', git: 'git@github.groupondev.com:MerchantOS/gem-merchantos-mailer.git', ref: 'HEAD'
-# gem 'gem-merchantos-mailer', path: "../gem-merchantos-mailer" # local dev
 gem 'premailer'
 
-gem 'log4mos', git: 'git@github.groupondev.com:MerchantOS/log4mos.git'
-gem 'request_context', git: 'git@github.groupondev.com:MerchantOS/request_context.git'
 gem 'airbrake'
 
 # Gems used only for assets and not required
@@ -109,15 +101,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'ci_reporter_cucumber'
   gem 'ci_reporter_rspec'
-  gem 'stats-core-api', git: "git@github.groupondev.com:MerchantOS/gem-stats-core.git"
-  gem 'ar_outer_joins', git: 'git@github.groupondev.com:MerchantOS/ar_outer_joins.git'
 end
 
 group :production do
   gem 'unicorn'
-  gem 'payments-deployment', git: 'git@github.groupondev.com:payments/gem-deployment.git', ref: 'HEAD'
-end
-
-group :everyone_except_rubymine do
-  # gem 'pry-byebug'
 end

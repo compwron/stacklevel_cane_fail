@@ -10,72 +10,6 @@ GIT
       xpath (~> 2.0)
 
 GIT
-  remote: git@github.groupondev.com:MerchantOS/ar_outer_joins.git
-  revision: b6a83971f68d0e6fbb66ed5a434c9a0d434ff82a
-  specs:
-    ar_outer_joins (0.0.1)
-      activerecord (>= 3.2)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/gem-bpro-web-base.git
-  revision: 0f566705dacdc8fab366c74fa716e74493bf3591
-  ref: HEAD
-  specs:
-    bpro-web-base (0.0.1)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/gem-groupon-oauth.git
-  revision: 521d17eb71fbf9c58113bca15e3a2b846a8338a4
-  specs:
-    gem-groupon-oauth (0.0.6)
-      activesupport (~> 3.2.12)
-      typhoeus (~> 0.6.5)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/gem-merchantos-mailer.git
-  revision: 1402369dae628df6fcf04b24e4c22803940b8ba1
-  ref: HEAD
-  specs:
-    gem-merchantos-mailer (0.0.1)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/gem-stats-core.git
-  revision: dd2c9ea3e69bf818d1fa9a1a84c8b0cf9799e1d1
-  specs:
-    stats-core-api (0.1.8)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/log4mos.git
-  revision: 606d2a853357e5c165e6ca7b8aeab8cbbe303a0e
-  specs:
-    log4mos (0.5)
-
-GIT
-  remote: git@github.groupondev.com:MerchantOS/request_context.git
-  revision: 5df583137dce8571319d99281e7604faf9e86900
-  specs:
-    request_context (0.1)
-
-GIT
-  remote: git@github.groupondev.com:payments/gem-deployment.git
-  revision: bc62bd52ffafec7ca6561fb6126a8b2f8faa156d
-  ref: HEAD
-  specs:
-    payments-deployment (0.0.7)
-      capistrano (~> 2.15.5)
-      capistrano-deploytags (~> 0.8.0)
-      capistrano-detect-migrations (~> 0.6.1)
-
-GIT
-  remote: git@github.groupondev.com:payments/gem-payments-ds.git
-  revision: fa877a967071faebc0652f092782406c49e001f2
-  ref: HEAD
-  specs:
-    gem-payments-ds (0.0.13)
-      activesupport (>= 3.0)
-      typhoeus
-
-GIT
   remote: https://github.com/colszowka/simplecov.git
   revision: 0d85bd0e4e3eda4253c0b67b8ff0f1f74635e466
   specs:
@@ -156,21 +90,6 @@ GEM
     cancan (1.6.9)
     cane (2.6.0)
       parallel
-    capistrano (2.15.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
-    capistrano-deploytags (0.8.0)
-      capistrano
-      capistrano-ext
-    capistrano-detect-migrations (0.6.3)
-      capistrano
-      capistrano-deploytags
-      capistrano-ext
-    capistrano-ext (1.2.1)
-      capistrano (>= 1.0.0)
     childprocess (0.4.0)
       ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.2.8)
@@ -294,7 +213,6 @@ GEM
       sprockets (>= 2.0.3)
       tilt
     hashie (1.2.0)
-    highline (1.6.21)
     hike (1.2.3)
     htmlentities (4.3.2)
     http_parser.rb (0.5.3)
@@ -332,11 +250,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     oj (2.0.12)
@@ -542,9 +456,7 @@ DEPENDENCIES
   addressable
   airbrake
   annotate (~> 2.6.5)
-  ar_outer_joins!
   awesome_print (~> 1.6.1)
-  bpro-web-base!
   cancan
   cane
   capybara!
@@ -563,9 +475,6 @@ DEPENDENCIES
   fast-aes
   fog (= 1.17.0)
   foreman
-  gem-groupon-oauth!
-  gem-merchantos-mailer!
-  gem-payments-ds!
   guard
   guard-konacha
   guard-livereload
@@ -575,12 +484,10 @@ DEPENDENCIES
   jquery-rails
   konacha
   launchy
-  log4mos!
   mysql2
   oj
   omniauth
   parallel_tests
-  payments-deployment!
   pivotal_git_scripts
   poltergeist
   premailer
@@ -592,7 +499,6 @@ DEPENDENCIES
   rb-fsevent (~> 0.9)
   redis
   redis-rails
-  request_context!
   resque (= 1.25.2)
   resque-cleaner (= 0.2.12)
   resque-pool!
@@ -609,7 +515,6 @@ DEPENDENCIES
   simplecov-rcov
   spork-rails
   spring (~> 1.0.0)
-  stats-core-api!
   strong_parameters
   style-guide
   thin
@@ -620,3 +525,6 @@ DEPENDENCIES
   uuidtools
   vcr
   webmock
+
+BUNDLED WITH
+   1.10.6

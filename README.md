@@ -17,4 +17,7 @@ $
 
 $ which ruby
 /Users/me/.rvm/rubies/ruby-2.1.3/bin/ruby
+
+$ ruby -v
+ruby 2.1.3p242 (2014-09-19 revision 47630) [x86_64-darwin14.0]
 ````

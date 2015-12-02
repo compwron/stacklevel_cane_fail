@@ -14,4 +14,7 @@ SystemStackError: stack level too deep
 /Users/me/stacklevel_cane_fail/tmp/bundle/ruby/2.1.0/gems/cane-2.6.0/lib/cane/abc_check.rb:92
 Tasks: TOP => default => cane => cane:quality
 $
+
+$ which ruby
+/Users/me/.rvm/rubies/ruby-2.1.3/bin/ruby
 ````

@@ -1,0 +1,39 @@
+.swatch {
+  position: relative;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+}
+
+.swatch:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 2px;
+  font-size: 10px;
+  line-height: 12px;
+  height: 12px;
+  background-color: #f5f5f5;
+  color: #5D5C5C;
+  opacity: 0.75;
+}
+
+.freshBlue:after { content: "Blue"; }
+.freshRed:after { content: "Red"; }
+.freshGold:after { content: "Gold"; }
+.freshBlack:after { content: "Black"; }
+.freshDarkGray:after { content: "DarkGray"; }
+.freshGray:after { content: "Gray"; }
+.freshGray:after { content: "Gray"; }
+.freshLightGray:after { content: "LightGray"; }
+.freshLighterGray:after { content: "LighterGray"; }
+
+.freshBlue        { background-color: #6D99D3; }
+.freshRed         { background-color: #B90020; }
+.freshGold        { background-color: #C59E16; }
+.freshBlack       { background-color: #5D5C5C; }
+.freshDarkGray    { background-color: #5D5C5C; }
+.freshGray        { background-color: #888; }
+.freshLightGray   { background-color: #ddd; }
+.freshLighterGray { background-color: #f5f5f5; }

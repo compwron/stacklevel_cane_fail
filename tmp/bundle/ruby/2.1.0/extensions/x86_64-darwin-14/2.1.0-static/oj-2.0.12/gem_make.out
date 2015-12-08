@@ -1,0 +1,36 @@
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/bin/ruby extconf.rb 
+>>>>> Creating Makefile for ruby version 2.1.3 on x86_64-darwin14.0 <<<<<
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling cache.c
+compiling cache8.c
+compiling dump.c
+dump.c:162:1: warning: unused function 'ulong2str' [-Wunused-function]
+ulong2str(uint32_t num, char *end) {
+^
+1 warning generated.
+compiling fast.c
+fast.c:150:1: warning: unused function 'next_white' [-Wunused-function]
+next_white(ParseInfo pi) {
+^
+1 warning generated.
+compiling load.c
+load.c:119:1: warning: unused function 'next_white' [-Wunused-function]
+next_white(ParseInfo pi) {
+^
+1 warning generated.
+compiling oj.c
+compiling saj.c
+saj.c:127:1: warning: unused function 'next_white' [-Wunused-function]
+next_white(ParseInfo pi) {
+^
+1 warning generated.
+linking shared-object oj.bundle
+ld: warning: directory not found for option '-L/Users/mpapis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 oj.bundle ./.gem.20151208-14497-wncdop
+installing default oj libraries

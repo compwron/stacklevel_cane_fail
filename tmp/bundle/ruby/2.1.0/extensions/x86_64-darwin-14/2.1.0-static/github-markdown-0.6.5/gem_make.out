@@ -1,0 +1,61 @@
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/bin/ruby extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling autolink.c
+compiling buffer.c
+compiling gh-markdown.c
+gh-markdown.c:56:29: warning: implicit declaration of function 'isspace' is invalid in C99 [-Wimplicit-function-declaration]
+                while (i < lang->size && !isspace(lang->data[i]))
+                                          ^
+gh-markdown.c:60:14: warning: assigning to 'const char *' from 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        lang_name = lang->data + 1;
+                                  ^ ~~~~~~~~~~~~~~
+gh-markdown.c:63:14: warning: assigning to 'const char *' from 'uint8_t *const' (aka 'unsigned char *const') converts between pointers to integer types with different sign [-Wpointer-sign]
+                        lang_name = lang->data;
+                                  ^ ~~~~~~~~~~
+gh-markdown.c:71:20: warning: passing 'uint8_t *const' (aka 'unsigned char *const') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+                                geefem_str_new(text->data, text->size),
+                                               ^~~~~~~~~~
+gh-markdown.c:21:50: note: expanded from macro 'geefem_str_new'
+#       define geefem_str_new(str, len) rb_enc_str_new(str, len, rb_utf8_encoding())
+                                                       ^
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/encoding.h:91:33: note: passing argument to parameter here
+VALUE rb_enc_str_new(const char*, long, rb_encoding*);
+                                ^
+gh-markdown.c:82:3: warning: implicit declaration of function 'houdini_escape_html0' is invalid in C99 [-Wimplicit-function-declaration]
+                houdini_escape_html0(ob, lang_name, lang_size, 0);
+                ^
+gh-markdown.c:122:33: warning: passing 'char *' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        sd_markdown_render(output_buf, RSTRING_PTR(rb_text), RSTRING_LEN(rb_text), md);
+                                       ^~~~~~~~~~~~~~~~~~~~
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/ruby.h:846:5: note: expanded from macro 'RSTRING_PTR'
+    (!(RBASIC(str)->flags & RSTRING_NOEMBED) ? \
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./markdown.h:124:51: note: passing argument to parameter 'document' here
+sd_markdown_render(struct buf *ob, const uint8_t *document, size_t doc_size, struct sd_markdown *md);
+                                                  ^
+gh-markdown.c:125:27: warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+        rb_text = geefem_str_new(output_buf->data, output_buf->size);
+                                 ^~~~~~~~~~~~~~~~
+gh-markdown.c:21:50: note: expanded from macro 'geefem_str_new'
+#       define geefem_str_new(str, len) rb_enc_str_new(str, len, rb_utf8_encoding())
+                                                       ^
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/encoding.h:91:33: note: passing argument to parameter here
+VALUE rb_enc_str_new(const char*, long, rb_encoding*);
+                                ^
+7 warnings generated.
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+compiling html.c
+compiling markdown.c
+compiling plaintext.c
+compiling stack.c
+linking shared-object github/markdown.bundle
+ld: warning: directory not found for option '-L/Users/mpapis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 markdown.bundle ./.gem.20151208-14497-twg5s/github
+installing default markdown libraries

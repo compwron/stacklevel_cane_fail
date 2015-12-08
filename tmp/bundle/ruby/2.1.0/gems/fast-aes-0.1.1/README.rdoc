@@ -1,0 +1,113 @@
+= FastAES - Fast AES implementation for Ruby in C
+
+This is a lightweight, fast implementation of AES (the US government's Advanced Encryption Standard,
+aka "Rijndael"), written in C for speed.  You can read more on the {Wikipedia AES Page}[http://en.wikipedia.org/wiki/Advanced_Encryption_Standard].
+The algorithm itself was extracted from work by Christophe Devine for the open source Netcat clone
+{sbd}[http://www.cycom.se/dl/sbd]. According to the community, this is
+{one of the best performing AES implementations available}[http://www.derkeiler.com/Newsgroups/sci.crypt/2003-07/0162.html]:
+
+    > With some exceptions your code performs better than all others in 
+    > enc[ryption]/dec[ryption]. Do you have an explanation of that fact? Thanks. 
+    >
+    Well, I've tried to make the code as simple and straightforward as 
+    possible; I also used a few basic tricks, like loop unrolling. 
+
+This gem supports the most important features of AES, specifically:
+
+* 128, 192, and 256-bit ciphers
+* Cipher Block Chaining (CBC) mode only
+* Encrypted blocks are padded at 16-bit boundaries ({read more on padding}[http://www.di-mgt.com.au/cryptopad.html#whatispadding])
+
+You can read specifics about AES-CBC in the IPSec-related {RFC 3602}[http://www.rfc-archive.org/getrfc.php?rfc=3602],
+if you really care that much.
+
+Bottom line, this gem works.  Fast.
+
+=== Other Ruby AES gems
+
+I couldn't find any that worked worth a crap.  The {ruby-aes}[http://rubyforge.org/projects/ruby-aes/]
+project has Ruby 1.9 bugs that have been open over _two_ _years_ now, {crypt/rijndael}[http://crypt.rubyforge.org/rijndael.html]
+doesn't work on Ruby 1.9 and is slooow (as it's written in Ruby), and some people even report getting
+{inconsistent encryption results from other libraries}[http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/228214].
+
+So I grabbed some C reference code, wrapped a Ruby interface around it, and voíla.
+
+C'mon people, it's not that hard.  It's called Google.  In my day, you had to actually *WRITE* the code.
+
+== Installation
+
+  gem install fast-aes
+
+== Example
+
+Simple encryption/decryption:
+
+  require 'fast-aes'
+
+  # key can be 128, 192, or 256 bits
+  key = '42#3b%c$dxyT,7a5=+5fUI3fa7352&^:'
+
+  aes = FastAES.new(key)
+
+  text = "Hey there, how are you?"
+
+  data = aes.encrypt(text)
+
+  puts aes.decrypt(data)   # "Hey there, how are you?"
+
+Pretty simple, jah?
+
+== Why AES?
+
+=== SSL vs AES
+
+I'm going to guess you're using Ruby with Rails, which means you're doing 90+% web development.
+In that case, if you need security, SSL is the obvious choice (and the right one).
+
+But there will probably come a time, padawan, when you need a couple backend servers to talk -
+maybe job servers, or an admin port, or whatever.  Maybe even a simple chat server.
+
+You can setup SSL certificates for this if you want it to be time-consuming to maintain.
+Or you can directly use an encryption algorithm, such as AES.  Setting up an SSH tunnel is another
+good alternative, if you control both systems.  I think it's easier to configure encryption keys
+as part of your application, rather than having to mess with each individual system, but that's me.
+
+For more information on how SSL/AES/RC4/TLS all interact,
+{read this article on SSL and AES}[http://luxsci.com/blog/256-bit-aes-encryption-for-ssl-and-tls-maximal-security.html]
+
+=== AES vs Other Encryption Standards
+
+There are a bizillion (literally!) different encryption standards out there.  If you have
+a PhD, and can't find a job, writing an encryption algorithm is a good thing to put on your resume -
+on the outside chance that someone will hire you and use it.  If you don't possess the talent to
+write an encryption standard, you can spend hours trying to crack one - for similar reasons.  As a
+result, of the many encryption alternatives, most are either (a) cracked or (b) covered by patents.
+
+Personally, when it comes to encryption, I think choosing what the US government chooses is a decent
+choice.  They tend to be "security conscious."
+
+=== Special Note
+
+As this software deals with encryption/decryption, please note there is *NO* *WARRANTY*, not even
+with regards to FITNESS FOR A PARTICULAR PURPOSE or NONINFRINGEMENT.  This means if you use this
+library, and it turns out there's a flaw in the implementation that results in your data being
+hacked, *IT* *IS* *NOT* *MY* *FAULT*.  It's YOUR responsibility to check the implementation of this
+library and algorithm.  If you can't understand C code, that's NOT MY PROBLEM.
+
+== Author
+
+Original AES C reference code by Christophe Devine.  Thanks Christophe!
+
+This gem copyright (c) 2010 {Nate Wiger}[http://nate.wiger.org].  Released under the MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

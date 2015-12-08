@@ -1,0 +1,37 @@
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/bin/ruby extconf.rb 
+checking for sys/times.h... yes
+checking for rb_os_allocated_objects()... no
+checking for rb_gc_allocated_size()... no
+checking for rb_gc_collections()... no
+checking for rb_gc_time()... no
+checking for rb_class_superclass()... yes
+checking for rb_heap_total_mem()... no
+checking for rb_gc_heap_info()... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rp_call_info.c
+compiling rp_measure.c
+compiling rp_measure_allocations.c
+compiling rp_measure_cpu_time.c
+compiling rp_measure_gc_runs.c
+compiling rp_measure_gc_time.c
+compiling rp_measure_memory.c
+compiling rp_measure_process_time.c
+compiling rp_measure_wall_time.c
+rp_measure_wall_time.c:13:5: warning: implicit declaration of function 'gettimeofday' is invalid in C99 [-Wimplicit-function-declaration]
+    gettimeofday(&tv, NULL);
+    ^
+1 warning generated.
+compiling rp_method.c
+compiling rp_stack.c
+compiling rp_thread.c
+compiling ruby_prof.c
+linking shared-object ruby_prof.bundle
+ld: warning: directory not found for option '-L/Users/mpapis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ruby_prof.bundle ./.gem.20151208-14497-1bw3i69
+installing default ruby_prof libraries

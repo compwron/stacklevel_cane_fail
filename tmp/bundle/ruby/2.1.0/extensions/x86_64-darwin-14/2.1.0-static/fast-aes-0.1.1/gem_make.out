@@ -1,0 +1,17 @@
+/Users/lgoldstein/.rvm/rubies/ruby-2.1.3/bin/ruby extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling fast_aes.c
+fast_aes.c:99:36: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+            rb_raise(rb_eArgError, error_mesg);
+                                   ^~~~~~~~~~
+1 warning generated.
+linking shared-object fast_aes.bundle
+ld: warning: directory not found for option '-L/Users/mpapis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 fast_aes.bundle ./.gem.20151208-14497-1nvtjnq
+installing default fast_aes libraries

@@ -1,0 +1,32 @@
+# pack-refs with: peeled fully-peeled 
+5a04b87b9db4b2d9aa0cd522426c5fdbd1155908 refs/heads/autoloads
+8b17f75737a715857c16918f93430de33f1c51d3 refs/heads/config_loaders_namespace
+4d8c5aec2f883a6eb37e232d5e286c671e97c854 refs/heads/decomposed_default_loader
+78e29cb61b4cf3c5198a435e1436b3450384e65f refs/heads/master
+d4a55f6c66a9509da8cb4d03fdef7b144aa8c5e8 refs/heads/memory_usage
+e8000cd9be082a5c9470aa3e9c31682595eefd67 refs/heads/redis_config_loader
+d0cb4272d8685a0cbe29c4cf83ebaf431f9e7e2d refs/heads/resque-web
+ee552e1f1e12aa4e75b696e63417a1391b7071d5 refs/heads/tmpstash
+75830a750512d67b44c697eaa5bb056e5f3db746 refs/heads/v0.3
+6e66722387fc6f42b442d99fa90e3590f1d678ae refs/heads/v0.4
+ece1976a90fcfc543a9c13ae2cf2076472122024 refs/heads/v0.5
+d5b12fe2f181853aeafd2785afcb42eef9cbf823 refs/tags/v0.0.10
+efce0003cdb3c1830463f3ed5563bb2b56df5a15 refs/tags/v0.0.4
+c5ebe29c518edf95f113e369f00475ba886fb0eb refs/tags/v0.0.5
+82cd3d43fff3a746cc791e8e1cf286700cf35bbb refs/tags/v0.0.7
+9cfb37718e967a97b55a40f876bd2f866610d91b refs/tags/v0.0.8
+^610e7e3f1b63819e3d9efb27ee0f7c3ca78cb20a
+eb9d4ec14d342278f78aaf307115b867649d5366 refs/tags/v0.0.9
+15cb7f41d0a7f9400d9207df6f0dec791107b198 refs/tags/v0.1.0
+c786dcc45282b0ef90e02baad3e1af7e5d1e6556 refs/tags/v0.2.0
+75830a750512d67b44c697eaa5bb056e5f3db746 refs/tags/v0.3.0
+61bd5f40969301a4950928c5828855e37dfcec99 refs/tags/v0.3.0.beta.1
+50c1e4a429175bcbbcd1540ec80843de21554028 refs/tags/v0.3.0.beta.2
+6e66722387fc6f42b442d99fa90e3590f1d678ae refs/tags/v0.4.0
+5e516143ab9b9ab5ec9b76bdaf92edca7ce4b5e3 refs/tags/v0.4.0.rc1
+71643f531374ce31142b25442cdc62175ee74845 refs/tags/v0.4.0.rc2
+00e12a9f2ded94720153bcea3aead0456a910a97 refs/tags/v0.4.0.rc3
+197e7d2415bb1639f7bb3d7678c8cad759db5eed refs/tags/v0.5.0
+ee37d5ca537d55d5c11aac232e014b42e4c5d803 refs/tags/v0.5.0.rc1
+66a1bb6d5d81a095bf0deaaff0ae4138f89f3a6c refs/tags/v0.6.0
+b3f74286613d764346f0e840eed626f2d33c3d71 refs/tags/v0.6.0.rc1
